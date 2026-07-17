@@ -137,8 +137,8 @@ export default function VideoEditor() {
       if (!ffmpeg.loaded) {
         await withTimeout(
           ffmpeg.load({
-            coreURL: await toBlobURL('/ffmpeg/ffmpeg-core.js', 'text/javascript'),
-            wasmURL: await toBlobURL('/ffmpeg/ffmpeg-core.wasm', 'application/wasm'),
+            coreURL: await toBlobURL(`${import.meta.env.BASE_URL}ffmpeg/ffmpeg-core.js`, 'text/javascript'),
+            wasmURL: await toBlobURL(`${import.meta.env.BASE_URL}ffmpeg/ffmpeg-core.wasm`, 'application/wasm'),
           }),
           60_000,
           '轉檔引擎載入超過 60 秒，請重新整理頁面後再試。',
