@@ -13,6 +13,16 @@ export default function App() {
       </div>
       <div className="privacy">檔案只在此裝置處理</div>
     </header>
-    <main>{mode === 'image' ? <ImageEditor /> : <VideoEditor />}</main>
+    <main>
+      {mode === 'image' ? <ImageEditor /> : <VideoEditor />}
+      <section className="seo-copy" aria-label="工具說明">
+        <h2>免費線上圖片與影片馬賽克工具</h2>
+        <p>馬賽克工作室讓你直接在瀏覽器中處理單張圖片與影片。所有檔案只會留在你的裝置，不會上傳到伺服器。</p>
+        <ul>
+          <li>圖片：拖曳框選區域、調整區塊大小，下載 PNG。</li>
+          <li>影片：播放與定位影格，建立多個矩形馬賽克片段，再輸出 MP4。</li>
+        </ul>
+      </section>
+    </main>
   </>
 }
